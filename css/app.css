@@ -1426,7 +1426,8 @@ footer {
   bottom: 1rem; }
   footer ul {
     display: inline-block;
-    list-style: none; }
+    list-style: none;
+    padding: 0; }
     footer ul li {
       float: left;
       margin: 0 0.75rem; }
