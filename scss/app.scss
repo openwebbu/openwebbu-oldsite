@@ -1,5 +1,6 @@
 @import "foundation/settings";
 @import "foundation/components/grid";
+@import "foundation/components/visibility";
 
 .text-center {
     text-align: center;
@@ -31,7 +32,7 @@ h2 {
 }
 
 body {
-    font-family: "Proxima Nova";
+    font-family: "proxima-nova", "Proxima Nova", Helvetica, Arial, sans-serif;
     color: #222222;
     background-color: #F4F7F9;
 }
