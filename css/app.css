@@ -1375,6 +1375,10 @@ header {
     header .right-nav ul li {
       float: left;
       margin: 0 1rem; }
+      header .right-nav ul li:first-child {
+        margin-left: 0; }
+      header .right-nav ul li:last-child {
+        margin-right: 0; }
 
 .home-content {
   padding-top: 6rem; }
