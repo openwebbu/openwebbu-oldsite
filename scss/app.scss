@@ -1,0 +1,153 @@
+@import "foundation/settings";
+@import "foundation/components/grid";
+
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: #222222;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p a {
+    color: #1E7DE9;
+}
+
+h2 {
+    margin-top: 4rem;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+body {
+    font-family: "Proxima Nova";
+    color: #222222;
+    background-color: #F4F7F9;
+}
+
+header {
+    padding: 1.5rem 0;
+    background-color: #fff;
+    border-bottom: 1px solid #EDEDED;
+
+    .title {
+        font-weight: 600;
+        font-size: 18px;
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .right-nav ul {
+        list-style: none;
+        float: right;
+        margin: 0;
+
+        li {
+            float: left;
+            margin: 0 1rem;
+        }
+    }
+}
+
+.home-content {
+    padding-top: 6rem;
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #27AAE1;
+        font-size: 32px;
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 3rem;
+    }
+
+    a.apply-button {
+        display: inline-block;
+        background-color: #27AAE1;
+        color: #fff;
+        text-transform: uppercase;
+        padding: .8rem 3rem;
+        border-radius: 4px;
+        margin-bottom: .5rem;
+        font-weight: 300;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #269CCD;
+        }
+    }
+
+    a.learn-button {
+        color: #AEC1CA;
+        font-weight: 300;
+    }
+}
+
+.content {
+    padding-bottom: 2rem;
+
+    .photos {
+        margin-top: 1rem;
+
+        img {
+            max-height: 160px;
+            margin: .5rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    p {
+        font-size: 16px;
+        color: #485560;
+    }
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+
+
+    ul {
+        display: inline-block;
+        list-style: none;
+
+        li {
+            float: left;
+            margin: 0 .75rem;
+            a {
+                color: #8AA0AB;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
