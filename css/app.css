@@ -1342,17 +1342,25 @@ th.hide-for-touch {
 
 a {
   text-decoration: none;
-  color: #222222; }
+  color: #0088EA; }
   a:hover {
     text-decoration: underline; }
 
-p a {
-  color: #1E7DE9; }
-
-h2 {
+h1 {
   margin-top: 4rem;
   font-weight: 600;
-  font-size: 24px; }
+  font-size: 1.5rem; }
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem; }
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: .25rem; }
 
 body {
   font-family: "proxima-nova", "Proxima Nova", Helvetica, Arial, sans-serif;
@@ -1363,6 +1371,8 @@ header {
   padding: 1.5rem 0;
   background-color: #fff;
   border-bottom: 1px solid #EDEDED; }
+  header a {
+    color: #222222; }
   header .title {
     font-weight: 600;
     font-size: 18px; }
@@ -1433,5 +1443,29 @@ footer {
       margin: 0 0.75rem; }
       footer ul li a {
         color: #8AA0AB; }
+
+section.design-content .group-icon {
+  position: absolute;
+  left: -20px;
+  top: 7px; }
+
+section.design-content p.label {
+  font-size: 0.75rem;
+  color: #BCC3CA;
+  margin-bottom: .1rem;
+  margin-top: .4rem; }
+
+section.design-content div.link-block {
+  margin-bottom: 2.5rem;
+  padding-left: 0; }
+  section.design-content div.link-block a {
+    display: block; }
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #DCDCDC;
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
 
 /*# sourceMappingURL=app.css.map */
