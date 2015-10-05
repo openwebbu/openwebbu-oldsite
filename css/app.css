@@ -1768,6 +1768,7 @@ section.design-content {
     margin-bottom: 1.5rem;
     text-align: center; }
   .right-nav ul {
+    padding: 0;
     text-align: center; } }
 
 /*# sourceMappingURL=app.css.map */
