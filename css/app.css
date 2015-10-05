@@ -1654,11 +1654,10 @@ header {
       text-decoration: none; }
   header .right-nav ul {
     list-style: none;
-    float: right;
     margin: 0; }
     header .right-nav ul li {
-      float: left;
-      margin: 0 1.125rem; }
+      display: inline-block;
+      margin: 0 1rem; }
       header .right-nav ul li:first-child {
         margin-left: 0; }
       header .right-nav ul li:last-child {
@@ -1763,5 +1762,12 @@ section.design-content {
     font-size: 16px; }
   .article-links li {
     margin-bottom: .5rem; }
+
+@media only screen and (max-width: 40em) {
+  header .title {
+    margin-bottom: 1.5rem;
+    text-align: center; }
+  .right-nav ul {
+    text-align: center; } }
 
 /*# sourceMappingURL=app.css.map */

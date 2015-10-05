@@ -61,12 +61,11 @@ header {
 
     .right-nav ul {
         list-style: none;
-        float: right;
         margin: 0;
 
         li {
-            float: left;
-            margin: 0 1.125rem;
+            display: inline-block;
+            margin: 0 1rem;
 
 
             &:first-child {
@@ -229,5 +228,19 @@ section.design-content {
 }
 
 
+@media #{$small-only} {
+    header {
+        .title {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+    }
 
+    .right-nav {
+
+        ul {
+            text-align: center;
+        }
+    }
+}
 
