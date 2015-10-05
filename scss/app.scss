@@ -1,5 +1,6 @@
 @import "foundation/settings";
 @import "foundation/components/grid";
+@import "foundation/components/block-grid";
 @import "foundation/components/visibility";
 @import "variables";
 
@@ -21,13 +22,14 @@ h1 {
     font-size: 1.5rem;
 }
 h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
 }
 h3 {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 0;
     margin-bottom: .25rem;
 }
@@ -64,7 +66,7 @@ header {
 
         li {
             float: left;
-            margin: 0 1rem;
+            margin: 0 1.125rem;
 
 
             &:first-child {
@@ -171,18 +173,23 @@ section.design-content {
     p.label {
         font-size: 0.75rem;
         color: #BCC3CA;
-        margin-bottom: .1rem;
+        margin-bottom: .25rem;
         margin-top: .4rem;
     }
 
-    div.link-block {
-        margin-bottom: 2.5rem;
-        padding-left: 0;
+    .link-block {
+        margin-bottom: .5rem;
 
         a {
+            line-height: 18px;
+
             display: block;
+            font-weight: 300;
+            margin-bottom: .4rem;
         }
     }
+
+    padding-bottom: 4rem;
 }
 
 .separator {
@@ -193,6 +200,22 @@ section.design-content {
     margin-bottom: 2rem;
 }
 
+.article-links {
+    font-size: 14px;
+    margin-top: 0;
+    font-weight: 300;
+    padding: 0;
+
+    a {
+        font-size: 16px;
+    }
+
+    li {
+        margin-bottom: .5rem;
+    }
+
+    color: #222;
+}
 
 
 
