@@ -1736,6 +1736,15 @@ section.design-content {
       display: block;
       font-weight: 300;
       margin-bottom: .4rem; }
+      section.design-content .link-block a.star::before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/star.png);
+        background-size: 100%;
+        margin-left: -16px;
+        margin-top: 3px;
+        width: 11px;
+        height: 11px; }
 
 .separator {
   width: 100%;
