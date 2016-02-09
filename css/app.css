@@ -1717,6 +1717,23 @@ footer {
       footer ul li a {
         color: #8AA0AB; }
 
+section.projects-content h2 {
+  margin-bottom: 0; }
+
+section.projects-content h3 {
+  font-weight: 500;
+  font-style: italic; }
+
+section.projects-content .app-banner {
+  width: 100%;
+  height: 350px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 3px 3px 3px 3px; }
+  section.projects-content .app-banner#ghost-companion {
+    background-image: url("../img/ghost-companion-banner.jpg"); }
+
 section.design-content {
   padding-bottom: 4rem; }
   section.design-content .group-icon {
