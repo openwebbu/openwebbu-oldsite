@@ -20,6 +20,21 @@ h1 {
     margin-top: 4rem;
     font-weight: 600;
     font-size: 1.5rem;
+    span {
+        font-size: 0.8rem;
+        font-weight: 300;
+        text-indent: 30px;
+        &.star::before {
+            content: "";
+            position: absolute;
+            background-image: url(../img/star.png);
+            background-size: 100%;
+            margin-top: 12px;
+            margin-left: 10px;
+            width: 11px;
+            height: 11px;
+        }
+    }
 }
 h2 {
     font-size: 1rem;
@@ -58,21 +73,31 @@ header {
             }
         }
     }
+    
+    .medium-7-alt {
+        width: 65.3333% !important;
+    }
+    
+    .medium-3-alt {
+        width: 18% !important;
+    }
 
-    .right-nav ul {
-        list-style: none;
-        margin: 0;
 
-        li {
-            display: inline-block;
-            margin: 0 1rem;
-
-
-            &:first-child {
-                margin-left: 0;
-            }
-            &:last-child {
-                margin-right: 0;
+    .right-nav {
+        margin-right: 8.3333% !important;
+        ul {
+            list-style: none;
+            margin: 0;
+            a {
+                display: inline-block;
+                margin: 0 1rem !important;
+    
+                &:first-of-type {
+                    margin-left: 0 !important;
+                }
+                &:last-of-type {
+                    margin-right: 0 !important;
+                }
             }
         }
     }
@@ -252,20 +277,103 @@ section.design-content {
     color: #222;
 }
 
+.mobile {
+    display: none;
+}
+
+.trans {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.trans2 {
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
 
 @media #{$small-only} {
-    header {
-        .title {
-            margin-bottom: 1.5rem;
-            text-align: center;
+    
+    .mobile {
+        display: block;
+    }
+    
+    .home-content {
+        padding: 5rem 0 5rem 0;
+    }
+    
+    h1 {
+        span {
+            &.star::before {
+                margin-top: 14px;
+            }
         }
     }
-
-    .right-nav {
-
-        ul {
-            padding: 0;
+    
+    header {
+        padding: 0px;
+        line-height: 52px;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background-color: white;
+        .medium-3-alt, .medium-7-alt {
+            width: inherit !important;
+        }
+        .title {
+            margin-bottom: 0px;
             text-align: center;
+        }
+        .nav-trigger {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+        label[for="nav-trigger"] {
+            position: absolute;
+            top: 17px;
+            right: 23px;
+            z-index: 2;
+            width: 24px;
+            height: 22px;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='24px' height='22px' viewBox='0 0 24 22' enable-background='new 0 0 24 22' xml:space='preserve'><rect width='26' height='3'/><rect y='16' width='26' height='3'/><rect y='8' width='26' height='3'/></svg>");
+            background-size: contain;
+        }
+        
+        .nav-trigger:checked ~ .right-nav {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .right-nav {
+            pointer-events: none;
+            padding: 0px;
+            opacity: 0;
+            position: fixed;
+            top: 52px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-top: 1px solid #f5f7f9;
+            z-index: 1;
+            ul {
+                padding: 0;
+                text-align: center;
+                a {
+                    display: block; 
+                    margin: 0 !important;
+                    text-align: left;
+                    padding: 0 20px;
+                    &:first-child {
+                        margin-left: 0 !important;
+                    }
+                }
+            }
         }
     }
 }

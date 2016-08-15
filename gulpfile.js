@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     maps = require('gulp-sourcemaps'),
+    cleanCSS = require('gulp-clean-css'),
     livereload = require('gulp-livereload');
 
 
@@ -11,6 +12,7 @@ gulp.task("compileSass", function() {
     return gulp.src('scss/app.scss')
         .pipe(maps.init())
         .pipe(sass({ includePaths: ['./bower_components/foundation/scss'] }))
+        .pipe(cleanCSS())
         .pipe(maps.write("./"))
         .pipe(gulp.dest('css'))
         .pipe(livereload());
