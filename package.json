@@ -2,11 +2,27 @@
   "name": "openwebbu.github.io",
   "version": "1.0.0",
   "description": "Website for Open Web BU",
-  "keywords": ["Open", "Web", "BU", "Boston University", "CS", "Spark"],
+  "keywords": [
+    "Open",
+    "Web",
+    "BU",
+    "Boston University",
+    "CS",
+    "Spark"
+  ],
   "author": "Open Web",
   "repository": {
     "url": "https://github.com/openwebbu/openwebbu.github.io",
     "type": "git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "bundle": "webpack",
+    "parcel": "parcel build src/app.ts src/styles.scss --out-dir static"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.2",
+    "typescript": "^3.8.3"
+  }
 }
