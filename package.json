@@ -1,18 +1,12 @@
 {
-  "name": "design-resources",
+  "name": "openwebbu.github.io",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Website for Open Web BU",
+  "keywords": ["Open", "Web", "BU", "Boston University", "CS", "Spark"],
+  "author": "Open Web",
+  "repository": {
+    "url": "https://github.com/openwebbu/openwebbu.github.io",
+    "type": "git"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-livereload": "^3.8.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.5.2"
-  }
+  "license": "MIT"
 }
