@@ -30,3 +30,7 @@ npm-debug.log*
 node_modules/
 
 .cache/
+
+#Take out images that are already committed in assets (and served from docs!!)
+static/*.png
+static/*.img 
