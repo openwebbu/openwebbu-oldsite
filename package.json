@@ -17,10 +17,12 @@
   },
   "license": "MIT",
   "scripts": {
-    "bundle": "webpack",
-    "parcel": "parcel build src/app.ts src/styles.scss --out-dir static"
+    "parcel": "parcel build src/app.ts src/styles.scss --out-dir static",
+    "build": "npm run parcel && hugo -d docs",
+    "serve": "npm run parcel && hugo serve -d docs"
   },
   "devDependencies": {
+    "hugo-bin": "^0.54.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.2",
     "typescript": "^3.8.3"
