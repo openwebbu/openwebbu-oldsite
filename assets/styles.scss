@@ -1,8 +1,14 @@
-@import "foundation/settings";
-@import "foundation/components/grid";
-@import "foundation/components/block-grid";
-@import "foundation/components/visibility";
-@import "variables";
+// ------------------------------------
+// Fonts
+// ------------------------------------
+
+$main-font-stack: "Proxima Nova", "proxima-nova", Helvetica, Arial, sans-serif;
+
+// ------------------------------------
+// Colors
+// ------------------------------------
+$link-color: #0088EA;
+$text-color: #222222;
 
 .text-center { text-align: center; }
 .text-left { text-align: left; }
@@ -27,7 +33,7 @@ h1 {
         &.star::before {
             content: "";
             position: absolute;
-            background-image: url(../img/star.png);
+            background-image: url('img/star.png');
             background-size: 100%;
             margin-top: 12px;
             margin-left: 10px;
@@ -198,9 +204,6 @@ section.projects-content {
         background-repeat: no-repeat;
         background-position: center center;
         border-radius: 3px 3px 3px 3px;
-        &#ghost-companion {
-            background-image: url('../img/ghost-companion-banner.jpg');
-        }
     }
 }
 
@@ -234,7 +237,7 @@ section.design-content {
             &.star::before {
                 content: "";
                 position: absolute;
-                background-image: url(../img/star.png);
+                background-image: url(img/star.png);
                 background-size: 100%;
                 margin-left: -16px;
                 margin-top: 3px;
@@ -292,7 +295,7 @@ section.design-content {
     transition: all 0.15s ease-in-out;
 }
 
-@media #{$small-only} {
+@media (max-width:720px) {
     
     .mobile {
         display: block;

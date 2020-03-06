@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "parcel": "parcel build src/app.ts src/styles.scss --out-dir static",
+    "parcel": "parcel build assets/app.ts assets/styles.scss --out-dir static",
     "build": "npm run parcel && hugo -d docs",
     "serve": "npm run parcel && hugo serve -d docs"
   },
