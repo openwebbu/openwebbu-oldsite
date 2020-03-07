@@ -1,43 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Open Web</title>
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-    <script src="https://use.typekit.net/oki2uhq.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+---
+title: "About"
+date: 2020-03-07T13:50:22-05:00
+---
 
-  ga('create', 'UA-49802010-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</head>
-<body>
-
-<header>
-   <div class="row">
-       <div class="columns small-12 medium-3-alt medium-offset-1 title">
-           <a href="/">Open Web</a>
-       </div>
-        
-        <div class="columns center small-12 medium-7-alt text-center right-nav trans2">
-            <div class="fade-left"></div>
-           <div class="scrollable">
-               <a href="about">About</a>
-               <a href="resources">Resources</a>
-               <a href="workshop">Workshops</a>
-               <a href="join">Join</a>
-           </div>
-           <div class="fade-right"></div>
-           <div class="fade-bottom"></div>
-        </div>
-   </div>
-</header>
+test
 
 <section class="content">
     <div class="row">
@@ -49,7 +15,7 @@
 
             <p>
             To join our team, you'll need to <a href="http://openwebbu.org/join" target="_blank">apply </a>. Even if you don't join us, we organize plenty of workshops and events open to the entire BU community Make sure that you're subscribed to our mailing list and follow our Facebook page, so you don't miss any updates! You may also find us on <a href="https://www.facebook.com/openwebbu" target="_blank">Facebook</a>, <a href="https://twitter.com/openwebbu" target="_blank">Twitter</a>, <a href="https://medium.com/@openwebbu" target="_blank">Medium</a>, and <a href="https://instagram.com/openwebbu/" target="_blank">Instagram</a>. If you have any questions, you can email us at <a href="mailto:openweb@bu.edu">openweb@bu.edu</a>
-            </p>
+            </p> 
         </div>
     </div>
     <div class="row photos">
@@ -58,9 +24,3 @@
         <img src="img/photo2.png">
       </div>
     </div>
-</section>
-
-
-
-</body>
-</html>

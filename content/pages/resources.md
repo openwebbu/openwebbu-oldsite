@@ -1,54 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resources | Open Web</title>
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-    
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Design Resources by Open Web" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://openwebbu.org/resources" />
-    <meta property="og:image" content="http://openwebbu.org/img/resources-share.png" />
-    <meta property="og:description" content="Collection of hand-picked resources for Interface Designers." />
+---
+title: "Resources"
+date: 2020-03-07T13:50:42-05:00
+---
 
-    <!-- Typekit -->
-    <script src="https://use.typekit.net/oki2uhq.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-49802010-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-</head>
-<body>
-
-    <header>
-       <div class="row">
-           <div class="columns small-12 medium-3-alt medium-offset-1 title">
-               <a href="/">Open Web</a>
-           </div>
-            
-            <div class="columns center small-12 medium-7-alt text-center right-nav trans2">
-                <div class="fade-left"></div>
-               <div class="scrollable">
-                   <a href="about">About</a>
-                   <a href="resources">Resources</a>
-                   <a href="workshop">Workshops</a>
-                   <a href="join">Join</a>
-               </div>
-               <div class="fade-right"></div>
-               <div class="fade-bottom"></div>
-            </div>
-       </div>
-    </header>
-
-
+test
 
 <section class="design-content">
     <div class="row">
@@ -294,6 +249,3 @@
     </div>
 
 </section>
-
-</body>
-</html>

@@ -1,48 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Join Open Web</title>
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-    <script src="https://use.typekit.net/oki2uhq.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+---
+title: "Join"
+date: 2020-03-07T13:51:01-05:00
+---
 
-  ga('create', 'UA-49802010-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</head>
-<body>
-
-<header>
-   <div class="row">
-       <div class="columns small-12 medium-3-alt medium-offset-1 title">
-           <a href="/">Open Web</a>
-       </div>
-        
-        <div class="columns center small-12 medium-7-alt text-center right-nav trans2">
-            <div class="fade-left"></div>
-           <div class="scrollable">
-               <a href="about">About</a>
-               <a href="resources">Resources</a>
-               <a href="workshop">Workshops</a>
-               <a href="join">Join</a>
-           </div>
-           <div class="fade-right"></div>
-           <div class="fade-bottom"></div>
-        </div>
-   </div>
-</header>
+test
 
 <section class="content">
     <div class="row">
         <div class="columns medium-7 medium-offset-1">
-            <h1>Join our team</h1>
+            <h1>Join our team!!</h1>
             <p>
             Interested in joining Open Web? Great! We're looking for highly motivated students with various backgrounds, but are primarily developers and designers. We expect all members to have programming experience, unless you're extremely motivated and will learn quickly (we're here to teach you!). The club is open for people with their own app ideas and also students who would like to join one of our existing projects - but not for people who just have an idea and want somebody else to build it for them.
             </p>
@@ -79,8 +45,3 @@
         </div>
     </div>
 </section>
-
-
-
-</body>
-</html>
