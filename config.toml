@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Open Web"
+
+[params]
+    stylesheet = "styles.css"
+    author = "Blake Abel"
