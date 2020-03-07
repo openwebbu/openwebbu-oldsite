@@ -2,13 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Web</title>
-    <link>http://localhost:1313/</link>
+    <link>http://example.org/</link>
     <description>Recent content on Open Web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2020 13:43:21 -0500</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>http://example.org/</link>
+      <pubDate>Sat, 07 Mar 2020 13:43:21 -0500</pubDate>
+      
+      <guid>http://example.org/</guid>
+      <description>Helloooooo! Hi
+  </description>
+    </item>
     
   </channel>
 </rss>
