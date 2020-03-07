@@ -34,3 +34,4 @@ node_modules/
 #Take out images that are already committed in assets (and served from docs!!)
 static/*.png
 static/*.img 
+resources/
