@@ -1,10 +1,24 @@
 {{ define "main" }}
+<style>
+	main {
+		background-color: transparent;
+	}
+
+	footer {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	footer a {
+		color: rgba(255,255,255,0.5);
+	}
+</style>
 	<main>
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-		{{ range $paginator.Pages }}
-			{{ .Render "summary" }}
-		{{ end }}
-		{{ partial "pagination.html" . }}
+		<div class="logo-hero">
+			<div class="big-logo">{{ readFile "assets/img/logo-white.svg" | safeHTML }}</div>
+			<button>Apply</button>
+		</div>
+
+		
 	</main>
-{{ partial "sidebar.html" . }}
 {{ end }}
