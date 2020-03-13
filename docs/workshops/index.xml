@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workshops on Open Web</title>
+    <link>http://localhost:1313/workshops/</link>
+    <description>Recent content in Workshops on Open Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2020 13:50:48 -0500</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/workshops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Website</title>
+      <link>http://localhost:1313/workshops/website/</link>
+      <pubDate>Thu, 12 Mar 2020 22:58:00 -0400</pubDate>
+      
+      <guid>http://localhost:1313/workshops/website/</guid>
+      <description>Here&amp;rsquo;s a workshop to get people used to assing stuff to the website possibly.</description>
+    </item>
+    
+  </channel>
+</rss>
