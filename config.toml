@@ -7,3 +7,6 @@ title = "Open Web"
     description = "Open Web BU is BU's best club for passionate coders."
     stylesheet = "styles.css"
     script = "app.js"
+
+    appsOpen = "true"
+    appURL = "https://docs.google.com/forms/d/e/1FAIpQLSefRharNR_Wpm_T5_8RaCA-UJODeKvDWPU_9kV5-rkX_Lf2Rw/viewform?usp=sf_link"
