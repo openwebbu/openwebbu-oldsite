@@ -2,7 +2,8 @@
 
 @import '../node_modules/normalize-scss/sass/normalize';
 @import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands.scss'; // For footer logos
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid.scss'; // For hamburger bars
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,400i,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
@@ -40,6 +41,7 @@ body {
     display: flex;
     flex-flow: column;
     font-size: 20px;
+    color: $text-color;
 }
 
 a {
@@ -130,6 +132,17 @@ footer {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
 
 @media (min-width: 820px) {
     main {
