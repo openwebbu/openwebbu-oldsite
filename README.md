@@ -3,6 +3,7 @@
 ## Editing this site locally
 
 * Assets contains the js and css for the whole site
+    * Images linked in css will get linked automatically in static, so at the moment you don't need to copy anything into static yourself (not sure about html though)
 * The rest of the site can be edited in the content section
 * Base layouts that the pages use can be found in layouts (and partials for helping to generate those)
 
