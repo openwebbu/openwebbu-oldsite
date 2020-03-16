@@ -11,25 +11,37 @@
 
 @import 'elevation.scss';
 
-
 // Variables
 
 $header-font: "Muli", Helvetica, Arial, sans-serif;
-
 $main-font: "Lato", Roboto, Helvetica, Arial, sans-serif;
 
-
-$link-color: #0088EA;
+$open-web-brand: #53b8e7;
 $text-color: #222222;
 
-$open-web-brand: #53b8e7;
+// Typography
 
-html {
-    height: 100%;
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+    color: $open-web-brand;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 p {
     font-family: $main-font;
+}
+
+a {
+    text-decoration: none;
+    color: $open-web-brand;
+}
+
+html {
+    height: 100%;
 }
 
 body {
@@ -42,28 +54,7 @@ body {
     flex-flow: column;
     font-size: 20px;
     color: $text-color;
-}
-
-a {
-    text-decoration: none;
-    color: $open-web-brand;
-}
-
-.logo-hero {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 100%;
-}
-
-.big-logo {
-    text-align:center;
-}
-
-svg#logo-white {
-    max-width: 50%;
-    padding:16px;
-
+    font-family: $main-font;
 }
 
 header {
@@ -73,7 +64,6 @@ header {
     color: $open-web-brand;
     padding: 12px;
     font-size: 30px;
-    text-transform: uppercase;
 
     @include BoxShadow(3);
     z-index:1;
@@ -84,6 +74,44 @@ header {
     }
 }
 
+nav {
+    overflow: hidden;
+    float: right;
+}
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        float: right;
+        display: block;
+        text-align: center;
+        padding: 4px 16px 0px;
+        text-decoration: none;
+        font-size: 24px;
+
+        :hover {
+            background-color: #ddd;
+            color: black;
+        }
+    
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+    }
+
+    li.icon {
+        display: none;
+    }
+
+} 
+  
+
+
 main {
     flex-grow: 1;
     margin: 0 10px;
@@ -93,21 +121,6 @@ main {
     
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $header-font;
-    color: $open-web-brand;
-    margin-bottom: 0.5rem;
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-img {
-    max-width: 100%;
-}
-
-//on larger screens, margin auto, max width somethin (maybe the breakpoint?)
 
 footer {
     width:100%;
@@ -129,23 +142,77 @@ footer {
     }
 }
 
+.logo-hero {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.big-logo {
+    text-align:center;
+}
+
+svg#logo-white {
+    max-width: 50%;
+    padding:16px;
+
+}
+
+img {
+    max-width: 100%;
+}
+
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
+// Change to hamburger menu when the menu would otherwise be too big.
+
+ @media screen and (max-width: 600px) {
+     // Hide the links before clicked
+
+     nav {
+         float: right;
+     }
+     
+    .topnav {
+        li {
+            float: left;
+        }
+
+        li:not(:first-child)  {
+            display: none;
+        }
+
+        li.icon {
+            float: right;
+            display: block;
+        }
+    }
+
+    .topnav.menuShown {
+        position: relative;
+
+        li {
+            display: block;
+            float: none;
+            text-align: center;
+        }
+
+        li.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
   }
 
+
+// Good text width is 800, so this breakpoint was set with that in mind.
 @media (min-width: 820px) {
     main {
         margin: auto;
+        width: 100%;
     }
 }

@@ -1,6 +1,7 @@
 ---
 title: "About Us"
 date: 2020-03-07T13:50:22-05:00
+menu: "main"
 ---
 
 Open Web is a student organization at Boston University that was founded in 2014 with the goal to bring highly motivated students together to work on apps and other tech projects. We are an app incubator - a closed organization where people develop projects and apps in small but driven teams. You can read more about the [founders' original vision here](https://medium.com/@openwebbu/the-new-chapter-for-open-web-3c06fe735a41).

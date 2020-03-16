@@ -1,3 +1,4 @@
 module.exports = {
-  content: ["docs/**/*.html"]
+  content: ["docs/**/*.html"],
+  whitelist: ["menuShown"]
 }

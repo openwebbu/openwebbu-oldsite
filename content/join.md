@@ -1,6 +1,7 @@
 ---
 title: "Join"
 date: 2020-03-07T13:51:01-05:00
+menu: "main"
 ---
 
 Interested in joining Open Web? Great! We're looking for highly motivated students with various backgrounds, but are primarily developers and designers. We expect all members to have programming experience, unless you're extremely motivated and will learn quickly (we're here to teach you!). The club is open for people with their own app ideas and also students who would like to join one of our existing projects - but not for people who just have an idea and want somebody else to build it for them.
