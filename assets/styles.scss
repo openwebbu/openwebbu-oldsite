@@ -74,9 +74,13 @@ header {
     }
 }
 
+.header__content {
+    max-width: 800px;
+    margin: auto;
+}
+
 nav {
-    overflow: hidden;
-    float: right;
+    width:100%;
 }
 
 .topnav {
@@ -88,13 +92,12 @@ nav {
         float: right;
         display: block;
         text-align: center;
-        padding: 4px 16px 0px;
+        padding: 0 16px;
         text-decoration: none;
         font-size: 24px;
 
         :hover {
-            background-color: #ddd;
-            color: black;
+            color: aqua;
         }
     
         .active {
@@ -104,8 +107,13 @@ nav {
 
     }
 
+    li:first-child  {
+        float:left;
+    }
+
     li.icon {
         display: none;
+        touch-action: manipulation;
     }
 
 } 
@@ -183,10 +191,17 @@ img {
 
         li:not(:first-child)  {
             display: none;
+            padding: 8px 16px 0;
+        }
+
+        li:first-child  {
+            float:none;
         }
 
         li.icon {
-            float: right;
+            position: absolute;
+            right: 4px;
+            top: 4px;
             display: block;
         }
     }
@@ -202,8 +217,8 @@ img {
 
         li.icon {
             position: absolute;
-            right: 0;
-            top: 0;
+            right: -8px;
+            top: -8px;
         }
     }
   }

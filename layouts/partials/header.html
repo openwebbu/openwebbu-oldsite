@@ -1,19 +1,24 @@
 <header>
-	<a href="{{ .Site.BaseURL }}">OPEN<span style="font-weight: 900;">WEB</span></a>
+	<div class="header__content">
+	{{ $homeURL := .Site.BaseURL }}
 	{{ with .Site.Menus.main }}
 	<nav>
 		<ul class="topnav">
+			<li><a href="{{ $homeURL }}">OPEN<span style="font-weight: 900;">WEB</span></a></li>
 		{{ range . }}
 			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 		{{ end }}
 			<li class="icon">
-				<a href="javascript:void(0);" onclick="showMenu()">
+				<a href="javascript:void(0);" onclick="window.showMenu()">
 					<i class="fa fa-bars"></i>
 				</a>
 			</li>
 		</ul>
 	</nav>
+	{{ else }}
+	<a href="{{ $homeURL }}">OPEN<span style="font-weight: 900;">WEB</span></a>
 	{{ end }}
+	</div>
 </header>
 
 <!--header> IF SITE.MENUS MAIN, THEN DO IT WITH HOME LOGO IN THE THING. OTHERWISE, JUST PUT THE LOGO HOW IT IS NOW. 
