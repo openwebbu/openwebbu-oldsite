@@ -114,6 +114,10 @@ nav {
     li.icon {
         display: none;
         touch-action: manipulation;
+
+        :hover {
+            color: $open-web-brand;
+        }
     }
 
 } 
