@@ -5,6 +5,7 @@ title = "Open Web"
 [params]
     author = "Open Web BU"
     description = "Open Web BU is BU's best club for passionate coders."
+    
     stylesheet = "styles.css"
     script = "app.js"
 
