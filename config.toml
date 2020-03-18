@@ -9,5 +9,5 @@ title = "Open Web"
     stylesheet = "styles.css"
     script = "app.js"
 
-    appsOpen = "true"
+    appsOpen = "false"
     appURL = "https://docs.google.com/forms/d/e/1FAIpQLSefRharNR_Wpm_T5_8RaCA-UJODeKvDWPU_9kV5-rkX_Lf2Rw/viewform?usp=sf_link"

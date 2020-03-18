@@ -3,46 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/join/</loc>
+    <loc>http://example.org/join/</loc>
     <lastmod>2020-03-07T13:51:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/workshops/</loc>
+    <loc>http://example.org/workshops/</loc>
     <lastmod>2020-03-07T13:50:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tools/</loc>
+    <loc>http://example.org/tools/</loc>
     <lastmod>2020-03-07T13:50:42-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://example.org/about/</loc>
     <lastmod>2020-03-07T13:50:22-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://example.org/</loc>
     <lastmod>2020-03-07T13:43:21-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/workshops/react-native-2017/</loc>
+    <loc>http://example.org/workshops/react-native-2017/</loc>
     <lastmod>2017-03-18T00:20:16-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/workshops/flask-web-dev-2016/</loc>
+    <loc>http://example.org/workshops/flask-web-dev-2016/</loc>
     <lastmod>2016-02-14T00:53:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://example.org/categories/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://example.org/tags/</loc>
   </url>
   
 </urlset>
