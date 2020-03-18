@@ -4,8 +4,8 @@
 @import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '../node_modules/@fortawesome/fontawesome-free/scss/brands.scss'; // For footer logos
 @import '../node_modules/@fortawesome/fontawesome-free/scss/solid.scss'; // For hamburger bars
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,400i,700,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,900&display=swap'); // Header font
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:400,400i,500&display=swap'); // Body font
 
 // Our imports
 
@@ -13,8 +13,10 @@
 
 // Variables
 
-$header-font: "Muli", Helvetica, Arial, sans-serif;
-$main-font: "Lato", Roboto, Helvetica, Arial, sans-serif;
+$logo-font: "Muli", Helvetica, Arial, sans-serif;
+$header-font: "IBM Plex Sans", Roboto, Helvetica, Arial, sans-serif;
+$main-font: "IBM Plex Sans", Roboto, Helvetica, Arial, sans-serif;
+$code-font: "IBM Plex Mono", Courier, Arial, sans-serif;
 
 $open-web-brand: #53b8e7;
 $text-color: #222222;
@@ -23,8 +25,18 @@ $text-color: #222222;
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $header-font;
+    font-weight: 500;
     color: $open-web-brand;
     margin-bottom: 0.5rem;
+}
+
+.nav__logo {
+    font-family: $logo-font;
+    font-size: 24px !important;
+}
+
+.nav__logo__thick {
+    font-weight: 900;
 }
 
 h1 {
@@ -33,11 +45,20 @@ h1 {
 
 p {
     font-family: $main-font;
+    line-height: 140%;
 }
 
 a {
     text-decoration: none;
     color: $open-web-brand;
+}
+
+code {
+    font-family: $code-font;
+}
+
+:not(pre) > code{
+    background-color: #d2edf9;
 }
 
 time {
@@ -94,42 +115,39 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
-    li {
-        float: right;
-        display: block;
-        text-align: center;
-        padding: 0 16px;
-        text-decoration: none;
-        font-size: 24px;
-
-        :hover {
-            color: aqua;
-        }
-    
-        .active {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-    }
-
-    li:first-child  {
-        float:left;
-    }
-
-    li.icon {
-        display: none;
-        touch-action: manipulation;
-
-        :hover {
-            color: $open-web-brand;
-        }
-    }
-
 } 
   
+.nav__link {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 20px;
 
+    :hover {
+        color: aqua;
+    }
+
+    .active {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+}
+
+.nav__link:first-child  {
+    float:left;
+}
+
+.nav__link.icon {
+    display: none;
+    touch-action: manipulation;
+
+    :hover {
+        color: $open-web-brand;
+    }
+}
 
 main {
     flex-grow: 1;
@@ -193,8 +211,8 @@ svg#logo-white {
     background-color: white;
     border-radius: 4px;
     padding: 16px 32px;
-    font-family: "Muli";
-    font-weight: 900;
+    font-family: $header-font;
+    font-weight: 500;
     border: none;
     font-size: 30px;
     color: #53b8e7;
@@ -222,40 +240,40 @@ pre {
 
 // Change to hamburger menu when the menu would otherwise be too big.
 
- @media screen and (max-width: 600px) {
+ @media screen and (max-width: 650px) {
      // Hide the links before clicked
-     
-    .topnav {
-        li {
-            float: none;
-        }
 
-        li:not(:first-child)  {
-            display: none;
-            padding: 8px 16px 0;
-        }
+    
 
-        li:first-child  {
-            float:none;
-        }
-
-        li.icon {
-            position: absolute;
-            right: 4px;
-            top: 4px;
-            display: block;
-        }
+     .nav__link {
+        float: none;
     }
 
-    .topnav.menuShown {
+    .nav__link:not(:first-child)  {
+        display: none;
+        padding: 8px 16px 0;
+    }
+
+    .nav__link:first-child  {
+        float:none;
+    }
+
+    .nav__link.icon {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        display: block;
+    }
+
+    .menuShown {
         position: relative;
 
-        li {
+        .nav__link {
             display: block;
             text-align: center;
         }
 
-        li.icon {
+        .nav__link.icon {
             position: absolute;
             right: -8px;
             top: -8px;
@@ -265,7 +283,7 @@ pre {
 
 
 // Good text width is 800, so this breakpoint was set with that in mind.
-@media (min-width: 820px) {
+@media (min-width: 840px) {
     main {
         margin: auto;
         width: 100%;
