@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Website</title>
-      <link>http://localhost:1313/workshops/website/</link>
-      <pubDate>Thu, 12 Mar 2020 22:58:00 -0400</pubDate>
-      
-      <guid>http://localhost:1313/workshops/website/</guid>
-      <description>Here&amp;rsquo;s a workshop to get people used to assing stuff to the website possibly.</description>
-    </item>
-    
-    <item>
       <title>Join</title>
       <link>http://localhost:1313/join/</link>
       <pubDate>Sat, 07 Mar 2020 13:51:01 -0500</pubDate>
@@ -47,6 +38,24 @@
       <guid>http://localhost:1313/about/</guid>
       <description>Open Web is a student organization at Boston University that was founded in 2014 with the goal to bring highly motivated students together to work on apps and other tech projects. We are an app incubator - a closed organization where people develop projects and apps in small but driven teams. You can read more about the founders&amp;rsquo; original vision here.
 To join our team, you&amp;rsquo;ll need to apply. Even if you don&amp;rsquo;t join us, we organize plenty of workshops and events open to the entire BU community Make sure that you&amp;rsquo;re subscribed to our mailing list and follow our Facebook page, so you don&amp;rsquo;t miss any updates!</description>
+    </item>
+    
+    <item>
+      <title>React Native Tutorial</title>
+      <link>http://localhost:1313/workshops/react-native-2017/</link>
+      <pubDate>Sat, 18 Mar 2017 00:20:16 -0500</pubDate>
+      
+      <guid>http://localhost:1313/workshops/react-native-2017/</guid>
+      <description>Teaching the basics of react native development. With React-Native, you can develop cross-platform mobile apps that can release on Android and iOS!</description>
+    </item>
+    
+    <item>
+      <title>Flask Web Development</title>
+      <link>http://localhost:1313/workshops/flask-web-dev-2016/</link>
+      <pubDate>Fri, 18 Mar 2016 00:53:01 -0500</pubDate>
+      
+      <guid>http://localhost:1313/workshops/flask-web-dev-2016/</guid>
+      <description>Learn how to use Flask &amp;ndash; which runs off Python, a language you probably know already from your classes at BU! &amp;ndash; to create a fantastic website.</description>
     </item>
     
   </channel>

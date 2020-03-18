@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flask Web Development | Open Web</title>
+	<meta name="description" content="Open Web BU is BU&#39;s best club for passionate coders.">
+	<meta name="author" content="Open Web BU">
+	<link rel="stylesheet" href="/styles.css">
+	<script defer src="/app.js"></script>
+	
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  
+		ga('create', 'UA-49802010-3', 'auto');
+		ga('send', 'pageview');
+	  
+	  </script>
+</head>
+<body>
+	<header>
+	<div class="header__content">
+	
+	
+	<nav>
+		<ul class="topnav">
+			<li><a href="http://localhost:1313/">OPEN<span style="font-weight: 900;">WEB</span></a></li>
+		
+			<li><a href="/about/">About Us</a></li>
+		
+			<li><a href="/join/">Join</a></li>
+		
+			<li><a href="/workshops/">Workshops</a></li>
+		
+			<li class="icon">
+				<a href="javascript:void(0);" onclick="window.showMenu()" aria-label="Navigation Menu">
+					<i aria-hidden="true" class="fa fa-bars"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	
+	</div>
+</header>
+	
+	<main>
+		<article>
+			<h1>Flask Web Development</h1>
+			<time></time>
+			<div>
+				<h2 id="setup">Setup</h2>
+<p>Install <a href="https://www.python.org/downloads/">Python 3</a>, and have your favorite text editor ready. We reccomend <a href="https://code.visualstudio.com/">VS Code</a>.</p>
+<p>Download the started code from our <a href="https://github.com/lawrluor/flask_webdev/">Github repo</a>.</p>
+<h3 id="create-your-virtual-environment">Create Your virtual environment</h3>
+<p>A virtual environment is an isolated Python environment that contains your application&rsquo;s libraries and dependencies. We will create and install a virtual environment, that we will name <code>flask</code>. The <code>activate</code> line activates your virtual environment.</p>
+<p>On <strong>OS X, Linux, Cygwin</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Navigate to your project directory (the starter code folder you downloaded)</span>
+
+<span style="color:#75715e"># Using Python 3</span>
+$ python3 -m venv flask 
+$ source flask/bin/activate
+
+<span style="color:#75715e"># Using Python 2</span>
+$ pip install virtualenv
+$ virtualenv flask
+
+<span style="color:#75715e"># If the ABOVE commands fail: ERROR: virtualenv is not compatible with this system or executable</span>  
+<span style="color:#75715e"># https://stackoverflow.com/questions/5904319/problem-with-virtualenv-in-mac-os-x</span>
+$ conda install virtualenv
+$ virtualenv flask
+
+<span style="color:#75715e"># Install requirements and flask libraries. Try flask/bin/pip3 if not working</span>
+$ flask/bin/pip install flask
+$ flask/bin/pip install flask-sqlalchemy
+$ flask/bin/pip install sqlalchemy-migrate
+$ flask/bin/pip install flask-whooshalchemy
+$ flask/bin/pip install flask-wtf</code></pre></div>
+<p>On <strong>Windows</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Navigate to your project directory (the starter code folder you downloaded)</span>
+<span style="color:#75715e"># $ dir will list all files &amp; folders in your current directory, $ cd [folder] will change your current directory</span>
+$ python get-pip.py <span style="color:#75715e"># Scripts\python # Python\get-pip.py</span>
+$ pip install virtualenv
+$ virtualenv flask
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\a</span>ctivate.bat
+
+<span style="color:#75715e"># Install requirements and flask libraries</span>
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask-sqlalchemy
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask-whooshalchemy
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask-wtf
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install sqlalchemy-migrate</code></pre></div>
+<h2 id="start">Start</h2>
+<p>Open VS Code, and drag the starter code repository into the window. There will be a side panel that appears that shows the basic folder structure for our application.</p>
+<ul>
+<li>The <code>app</code> folder will be where we will put our application package.</li>
+<li>The <code>templates</code> sub-folder is where our webpage templates will go (the front-end of the website, or the part the users interact with).</li>
+</ul>
+
+			</div>
+			
+			
+		</article>
+	</main>
+
+
+	<footer>
+	
+	<a href="https://www.facebook.com/openwebbu" aria-label="Facebook Page">
+		<i aria-hidden="true" class="fab fa-facebook-f"></i>
+	</a>
+	<a href="https://instagram.com/openwebbu/" aria-label="Instagram Profile">
+		<i aria-hidden="true" class="fab fa-instagram"></i>
+	</a>
+	<a href="https://medium.com/@openwebbu" aria-label="Medium Blog">
+		<i aria-hidden="true" class="fab fa-medium-m"></i>
+	</a>
+	<a href="https://twitter.com/openwebbu" aria-label="Twitter Feed">
+		<i aria-hidden="true" class="fab fa-twitter"></i>
+	</a>
+</footer>
+
+</body>
+</html>

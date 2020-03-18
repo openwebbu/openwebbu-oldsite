@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>Website</title>
-      <link>http://localhost:1313/workshops/website/</link>
-      <pubDate>Thu, 12 Mar 2020 22:58:00 -0400</pubDate>
+      <title>React Native Tutorial</title>
+      <link>http://localhost:1313/workshops/react-native-2017/</link>
+      <pubDate>Sat, 18 Mar 2017 00:20:16 -0500</pubDate>
       
-      <guid>http://localhost:1313/workshops/website/</guid>
-      <description>Here&amp;rsquo;s a workshop to get people used to assing stuff to the website possibly.</description>
+      <guid>http://localhost:1313/workshops/react-native-2017/</guid>
+      <description>Teaching the basics of react native development. With React-Native, you can develop cross-platform mobile apps that can release on Android and iOS!</description>
+    </item>
+    
+    <item>
+      <title>Flask Web Development</title>
+      <link>http://localhost:1313/workshops/flask-web-dev-2016/</link>
+      <pubDate>Fri, 18 Mar 2016 00:53:01 -0500</pubDate>
+      
+      <guid>http://localhost:1313/workshops/flask-web-dev-2016/</guid>
+      <description>Learn how to use Flask &amp;ndash; which runs off Python, a language you probably know already from your classes at BU! &amp;ndash; to create a fantastic website.</description>
     </item>
     
   </channel>

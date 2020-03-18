@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 p {
@@ -38,6 +38,11 @@ p {
 a {
     text-decoration: none;
     color: $open-web-brand;
+}
+
+time {
+    font-size: 18px;
+    font-style: italic;
 }
 
 // Layout
@@ -54,7 +59,7 @@ body {
     height:100%;
     display: flex;
     flex-flow: column;
-    font-size: 20px;
+    font-size: 16px;
     color: $text-color;
     font-family: $main-font;
 }
@@ -139,6 +144,9 @@ article {
     margin: auto;
 }
 
+.pagination {
+    text-align: center;
+}
 
 footer {
     width:100%;
@@ -199,6 +207,13 @@ svg#logo-white {
 
 img {
     max-width: 100%;
+}
+
+pre {
+    padding: 4px;
+    border-radius: 4px;
+    overflow: scroll;
+    font-size: 14px;
 }
 
 .text-center { text-align: center; }

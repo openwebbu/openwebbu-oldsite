@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/workshops/website/</loc>
-    <lastmod>2020-03-12T22:58:00-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/join/</loc>
     <lastmod>2020-03-07T13:51:01-05:00</lastmod>
   </url>
@@ -30,6 +25,16 @@
   <url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2020-03-07T13:43:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/workshops/react-native-2017/</loc>
+    <lastmod>2017-03-18T00:20:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/workshops/flask-web-dev-2016/</loc>
+    <lastmod>2016-03-18T00:53:01-05:00</lastmod>
   </url>
   
   <url>

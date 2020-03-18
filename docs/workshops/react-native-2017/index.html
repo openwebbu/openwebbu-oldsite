@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>React Native Tutorial | Open Web</title>
+	<meta name="description" content="Open Web BU is BU&#39;s best club for passionate coders.">
+	<meta name="author" content="Open Web BU">
+	<link rel="stylesheet" href="/styles.css">
+	<script defer src="/app.js"></script>
+	
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  
+		ga('create', 'UA-49802010-3', 'auto');
+		ga('send', 'pageview');
+	  
+	  </script>
+</head>
+<body>
+	<header>
+	<div class="header__content">
+	
+	
+	<nav>
+		<ul class="topnav">
+			<li><a href="http://localhost:1313/">OPEN<span style="font-weight: 900;">WEB</span></a></li>
+		
+			<li><a href="/about/">About Us</a></li>
+		
+			<li><a href="/join/">Join</a></li>
+		
+			<li><a href="/workshops/">Workshops</a></li>
+		
+			<li class="icon">
+				<a href="javascript:void(0);" onclick="window.showMenu()" aria-label="Navigation Menu">
+					<i aria-hidden="true" class="fa fa-bars"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	
+	</div>
+</header>
+	
+	<main>
+		<article>
+			<h1>React Native Tutorial</h1>
+			<time></time>
+			<div>
+				<h2 id="setup">Setup</h2>
+<p>Please set up and install the needed programs prior to attending the workshop if you can, so that you won&rsquo;t fall behind if you&rsquo;re having trouble.</p>
+<h3 id="set-up-your-workspace">Set Up Your Workspace</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">// Handle clicking on hamburger button <span style="color:#66d9ef">for</span> mobile
+// Create a folder named <span style="color:#e6db74">&#34;react_native_apps&#34;</span> on your Desktop
+cd
+cd Desktop
+mkdir react_native_apps
+cd react_native_apps</code></pre></div>
+<h3 id="download-starter-code">Download Starter Code</h3>
+<p>Go to the workshop&rsquo;s <a href="https://github.com/openwebbu/ReactNative_Workshop2017">Github repo</a> to download starter code!</p>
+<h3 id="install-tools--dependencies">Install Tools &amp; Dependencies</h3>
+<p>You will need <a href="https://developer.apple.com/xcode/downloads/">Xcode</a> and the Xcode Command Line Tools.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">// Install XCode Command Line Tools
+xcode-select --install</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">// Install Homebrew <span style="color:#f92672">(</span><span style="color:#66d9ef">if</span> you don<span style="color:#960050;background-color:#1e0010">&#39;</span>t have it already<span style="color:#f92672">)</span>
+/usr/bin/ruby -e <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+
+// Install components: nodeJS, Watchman, React-Native command line interface
+brew install node
+brew install watchman
+npm install -g react-native-cli // install react-native</code></pre></div>
+<h3 id="initilize-and-run-your-project">Initilize and Run your Project</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">react-native init BU_quiz // Initialize Project
+cd BU_quiz // change directory</code></pre></div>
+<p>Now, move the three .js files from AppCode into your BU_quiz directory (you can also use your finder/explorer)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv ../AppCode/QuestionPage.js QuestionPage.js
+mv ../AppCode/ResultPage.js. ResultPage.js
+mv ../AppCode/WelcomePage.js WelcomePage.js</code></pre></div>
+<p>Now, run your project.  If you brought your iOS or Android device and would rather run your app on your device, follow those steps in the next paragraph. Otherwise, run these commands to run the simulator on your laptop.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">react-native run-ios // <span style="color:#66d9ef">for</span> simulating iOS
+react-native run-android // <span style="color:#66d9ef">for</span> simulating android</code></pre></div>
+<p>Steps for running your app directly on your device (view <a href="https://facebook.github.io/react-native/docs/running-on-device.html">documentation</a> for more details):</p>
+<p><strong>iOS</strong></p>
+<ul>
+<li>Connect your device to your Mac via USB, then open Xcode.</li>
+<li>Navigate into ios folder of your project and open the file ending .xcodeproj inside it.</li>
+<li>In the project navigator, choose your device from the Product &gt; Destination toolbar menu. Xcode will then register your device for development.</li>
+<li>Finally, select your phone as the build target and press Build and run.</li>
+</ul>
+<p><strong>Android</strong></p>
+<ul>
+<li>View <a href="https://facebook.github.io/react-native/docs/running-on-device.html">Android Documentation</a></li>
+</ul>
+<p>If you&rsquo;ve loaded your app on the simulator/device successfully, you should be all set! If you need more help, please come early to the workshop and we&rsquo;ll be able to help you. :)</p>
+
+			</div>
+			
+			
+		</article>
+	</main>
+
+
+	<footer>
+	
+	<a href="https://www.facebook.com/openwebbu" aria-label="Facebook Page">
+		<i aria-hidden="true" class="fab fa-facebook-f"></i>
+	</a>
+	<a href="https://instagram.com/openwebbu/" aria-label="Instagram Profile">
+		<i aria-hidden="true" class="fab fa-instagram"></i>
+	</a>
+	<a href="https://medium.com/@openwebbu" aria-label="Medium Blog">
+		<i aria-hidden="true" class="fab fa-medium-m"></i>
+	</a>
+	<a href="https://twitter.com/openwebbu" aria-label="Twitter Feed">
+		<i aria-hidden="true" class="fab fa-twitter"></i>
+	</a>
+</footer>
+
+</body>
+</html>
