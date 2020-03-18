@@ -40,6 +40,8 @@ a {
     color: $open-web-brand;
 }
 
+// Layout
+
 html {
     height: 100%;
 }
@@ -130,7 +132,11 @@ main {
     padding: 0 10px;
     background-color: white;
     max-width: 800px;
-    
+}
+
+article {
+    max-width: 700px;
+    margin: auto;
 }
 
 
@@ -159,16 +165,36 @@ footer {
     flex-flow: column;
     justify-content: center;
     height: 100%;
-}
+    text-align: center;
+    color: white;
 
-.big-logo {
-    text-align:center;
+    h1, h2, h3 {
+        color: white;
+    }
 }
 
 svg#logo-white {
-    max-width: 50%;
+    max-width: 65%;
     padding:16px;
+    margin: 0 auto;
+}
 
+.apply-button {
+    width: max-content;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    padding: 16px 32px;
+    font-family: "Muli";
+    font-weight: 900;
+    border: none;
+    font-size: 30px;
+    color: #53b8e7;
+    @include BoxShadow(3);
+}
+
+.apply-button:hover {
+    @include BoxShadow(9);
 }
 
 img {
@@ -183,14 +209,10 @@ img {
 
  @media screen and (max-width: 600px) {
      // Hide the links before clicked
-
-     nav {
-         float: right;
-     }
      
     .topnav {
         li {
-            float: left;
+            float: none;
         }
 
         li:not(:first-child)  {
@@ -215,7 +237,6 @@ img {
 
         li {
             display: block;
-            float: none;
             text-align: center;
         }
 
