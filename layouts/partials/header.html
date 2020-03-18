@@ -4,11 +4,11 @@
 	{{ with .Site.Menus.main }}
 	<nav>
 		<ul class="topnav">
-			<li><a href="{{ $homeURL }}">OPEN<span style="font-weight: 900;">WEB</span></a></li>
+			<li class="nav__logo nav__link"><a href="{{ $homeURL }}">OPEN<span class="nav__logo__thick">WEB</span></a></li>
 		{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+			<li class="nav__link"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
 		{{ end }}
-			<li class="icon">
+			<li class="nav__link icon">
 				<a href="javascript:void(0);" onclick="window.showMenu()" aria-label="Navigation Menu">
 					<i aria-hidden="true" class="fa fa-bars"></i>
 				</a>
