@@ -21,13 +21,13 @@
     </item>
     
     <item>
-      <title>Resources</title>
-      <link>http://localhost:1313/resources/</link>
+      <title>Tools</title>
+      <link>http://localhost:1313/tools/</link>
       <pubDate>Sat, 07 Mar 2020 13:50:42 -0500</pubDate>
       
-      <guid>http://localhost:1313/resources/</guid>
-      <description>test
-&amp;lt;!-- Tools --&amp;gt; &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;columns small-10 small-centered&amp;quot;&amp;gt; &amp;lt;h2&amp;gt;Tools&amp;lt;/h2&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;columns small-10 small-centered&amp;quot;&amp;gt; &amp;lt;ul class=&amp;quot;small-block-grid-2 medium-block-grid-4&amp;quot;&amp;gt; &amp;lt;li class=&amp;quot;link-block&amp;quot;&amp;gt; &amp;lt;!-- &amp;lt;img class=&amp;quot;group-icon&amp;quot; src=&amp;quot;img/group-icons.svg&amp;quot;&amp;gt; --&amp;gt; &amp;lt;h3&amp;gt;Icons&amp;lt;/h3&amp;gt; &amp;lt;p class=&amp;quot;label&amp;quot;&amp;gt;FREE&amp;lt;/p&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://www.flaticon.com&amp;quot; class=&amp;quot;star&amp;quot;&amp;gt;Flaticon&amp;lt;/a&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;https://icons8.com&amp;quot;&amp;gt;Icons8&amp;lt;/a&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;https://www.iconfinder.com&amp;quot;&amp;gt;Iconfinder&amp;lt;/a&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;https://thenounproject.com&amp;quot;&amp;gt;The Noun Project&amp;lt;/a&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://www.google.com/design/icons/&amp;quot;&amp;gt;Material Design Icons&amp;lt;/a&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://geticonjar.com&amp;quot;&amp;gt;Iconjar&amp;lt;/a&amp;gt; &amp;lt;p class=&amp;quot;label&amp;quot;&amp;gt;PAID&amp;lt;/p&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://www.streamlineicons.com&amp;quot;&amp;gt;Streamline Icons&amp;lt;/a&amp;gt; &amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;https://roundicons.com/&amp;quot;&amp;gt;Round Icons&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li class=&amp;quot;link-block&amp;quot;&amp;gt; &amp;lt;!-- &amp;lt;img class=&amp;quot;group-icon&amp;quot; src=&amp;quot;img/group-icons.</description>
+      <guid>http://localhost:1313/tools/</guid>
+      <description>When you&amp;rsquo;re building your project, it can be daunting to figure out all the tools that you might want to use. There are so many options, and you don&amp;rsquo;t want to have to try them all. So, Open Web has put together a list of tools that we use frequently on a lot of our projects to save you some time!
+Developing  Prototyping: Invision, Adobe XD Typography: Google Fonts Icons: Fontawesome, Material Design Icons Color Scheming: Adobe Color CC  Learning  Inspiration: Dribble Courses: HackDesign Typography: Typogui.</description>
     </item>
     
     <item>
@@ -52,10 +52,10 @@ To join our team, you&amp;rsquo;ll need to apply. Even if you don&amp;rsquo;t jo
     <item>
       <title>Flask Web Development</title>
       <link>http://localhost:1313/workshops/flask-web-dev-2016/</link>
-      <pubDate>Fri, 18 Mar 2016 00:53:01 -0500</pubDate>
+      <pubDate>Sun, 14 Feb 2016 00:53:01 -0500</pubDate>
       
       <guid>http://localhost:1313/workshops/flask-web-dev-2016/</guid>
-      <description>Learn how to use Flask &amp;ndash; which runs off Python, a language you probably know already from your classes at BU! &amp;ndash; to create a fantastic website.</description>
+      <description>Learn how to use Flask &amp;ndash; which runs off Python, a language you probably know already from your classes at BU! &amp;ndash; to create a fantastic website that can interact with a database.</description>
     </item>
     
   </channel>
