@@ -14,10 +14,10 @@ Please set up and install the needed programs prior to attending the workshop if
 {{< highlight bash >}}
 // Handle clicking on hamburger button for mobile
 // Create a folder named "react_native_apps" on your Desktop
-cd
-cd Desktop
-mkdir react_native_apps
-cd react_native_apps
+$ cd
+$ cd Desktop
+$ mkdir react_native_apps
+$ cd react_native_apps
 {{< / highlight >}}
 
 ### Download Starter Code
@@ -30,40 +30,40 @@ You will need [Xcode](https://developer.apple.com/xcode/downloads/) and the Xcod
 
 {{< highlight bash >}}
 // Install XCode Command Line Tools
-xcode-select --install
+$ xcode-select --install
 {{< / highlight >}}
 
 
 {{< highlight bash >}}
 // Install Homebrew (if you don't have it already)
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 // Install components: nodeJS, Watchman, React-Native command line interface
-brew install node
-brew install watchman
-npm install -g react-native-cli // install react-native
+$ brew install node
+$ brew install watchman
+$ npm install -g react-native-cli // install react-native
 {{< / highlight >}}
 
 ### Initilize and Run your Project
 
 {{< highlight bash >}}
-react-native init BU_quiz // Initialize Project
-cd BU_quiz // change directory
+$ react-native init BU_quiz // Initialize Project
+$ cd BU_quiz // change directory
 {{< / highlight >}}
 
 Now, move the three .js files from AppCode into your BU_quiz directory (you can also use your finder/explorer)
 
 {{< highlight bash >}}
-mv ../AppCode/QuestionPage.js QuestionPage.js
-mv ../AppCode/ResultPage.js. ResultPage.js
-mv ../AppCode/WelcomePage.js WelcomePage.js
+$ mv ../AppCode/QuestionPage.js QuestionPage.js
+$ mv ../AppCode/ResultPage.js. ResultPage.js
+$ mv ../AppCode/WelcomePage.js WelcomePage.js
 {{< / highlight >}}
 
 Now, run your project.  If you brought your iOS or Android device and would rather run your app on your device, follow those steps in the next paragraph. Otherwise, run these commands to run the simulator on your laptop.
 
 {{< highlight bash >}}
-react-native run-ios // for simulating iOS
-react-native run-android // for simulating android
+$ react-native run-ios // for simulating iOS
+$ react-native run-android // for simulating android
 {{< / highlight >}}
 
 Steps for running your app directly on your device (view [documentation](https://facebook.github.io/react-native/docs/running-on-device.html) for more details):

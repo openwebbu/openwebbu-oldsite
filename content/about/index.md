@@ -8,6 +8,6 @@ Open Web is a student organization at Boston University that was founded in 2014
 
 To join our team, you'll need to [apply](http://openwebbu.org/join). Even if you don't join us, we organize plenty of workshops and events open to the entire BU community Make sure that you're subscribed to our mailing list and follow our Facebook page, so you don't miss any updates! You may also find us on [Facebook](https://www.facebook.com/openwebbu), [Twitter](https://twitter.com/openwebbu), [Medium](https://medium.com/@openwebbu), and [Instagram](https://instagram.com/openwebbu/). If you have any questions, you can email us at [openweb@bu.edu](mailto:openweb@bu.edu).
 
-![Open Web at SPLASH](splash.png)
+![Open Web at SPLASH](/about/splash.png)
 
-![Open Web Workshop](workshop.png)
+![Open Web Workshop](/about/workshop.png)
