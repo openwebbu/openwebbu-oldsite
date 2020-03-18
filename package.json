@@ -1,18 +1,37 @@
 {
-  "name": "design-resources",
+  "name": "openwebbu.github.io",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Website for Open Web BU",
+  "keywords": [
+    "Open",
+    "Web",
+    "BU",
+    "Boston University",
+    "CS",
+    "Spark"
+  ],
+  "author": "Open Web",
+  "repository": {
+    "url": "https://github.com/openwebbu/openwebbu.github.io",
+    "type": "git"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "scripts": {
+    "parcel": "parcel build assets/app.ts assets/styles.scss --out-dir static",
+    "prebuild": "rm -rf docs",
+    "build": "hugo -d docs && npm run parcel",
+    "serve": "hugo serve -d docs",
+    "start": "npm run build && npm run serve"
+  },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-livereload": "^3.8.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.5.2"
+    "hugo-bin": "^0.54.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-purgecss": "^2.1.3",
+    "sass": "^1.26.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "normalize-scss": "^7.0.1"
   }
 }

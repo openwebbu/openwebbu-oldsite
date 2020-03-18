@@ -1,0 +1,25 @@
+{{ define "main" }}
+<style>
+	main {
+		background-color: transparent;
+	}
+
+	footer {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	footer a {
+		color: rgba(255,255,255,0.5);
+	}
+</style>
+	<main>
+		<div class="logo-hero">
+			{{ readFile "assets/img/logo-white.svg" | safeHTML }}
+			{{ if eq .Site.Params.appsOpen "true" }}
+			<h2>New Member applications are currently open!</h2>
+			<a class="apply-button" href="{{ .Site.Params.appURL }}">Apply</a>
+			{{ end }}
+		</div>		
+	</main>
+{{ end }}

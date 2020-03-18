@@ -1,0 +1,22 @@
+<header>
+	<div class="header__content">
+	{{ $homeURL := .Site.BaseURL }}
+	{{ with .Site.Menus.main }}
+	<nav>
+		<ul class="topnav">
+			<li class="nav__logo nav__link"><a href="{{ $homeURL }}">OPEN<span class="nav__logo__thick">WEB</span></a></li>
+		{{ range . }}
+			<li class="nav__link"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+		{{ end }}
+			<li class="nav__link icon">
+				<a href="javascript:void(0);" onclick="window.showMenu()" aria-label="Navigation Menu">
+					<i aria-hidden="true" class="fa fa-bars"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	{{ else }}
+	<a href="{{ $homeURL }}">OPEN<span style="font-weight: 900;">WEB</span></a>
+	{{ end }}
+	</div>
+</header>
