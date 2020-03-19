@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Open Web</title>
+    <link>http://example.org/</link>
+    <description>Recent content in Home on Open Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Mar 2020 13:43:21 -0500</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Join</title>
+      <link>http://example.org/join/</link>
+      <pubDate>Sat, 07 Mar 2020 13:51:01 -0500</pubDate>
+      
+      <guid>http://example.org/join/</guid>
+      <description>Interested in joining Open Web? Great! We&amp;rsquo;re looking for highly motivated students with various backgrounds, but are primarily developers and designers. We expect all members to have programming experience, unless you&amp;rsquo;re extremely motivated and will learn quickly (we&amp;rsquo;re here to teach you!). The club is open for people with their own app ideas and also students who would like to join one of our existing projects - but not for people who just have an idea and want somebody else to build it for them.</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://example.org/tools/</link>
+      <pubDate>Sat, 07 Mar 2020 13:50:42 -0500</pubDate>
+      
+      <guid>http://example.org/tools/</guid>
+      <description>When you&amp;rsquo;re building your project, it can be daunting to figure out all the tools that you might want to use. There are so many options, and you don&amp;rsquo;t want to have to try them all. So, Open Web has put together a list of tools that we use frequently on a lot of our projects to save you some time!
+Developing  Prototyping: Invision, Adobe XD Typography: Google Fonts Icons: Fontawesome, Material Design Icons Color Scheming: Adobe Color CC  Learning  Inspiration: Dribble Courses: HackDesign Typography: Typogui.</description>
+    </item>
+    
+    <item>
+      <title>About Us</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Sat, 07 Mar 2020 13:50:22 -0500</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>Open Web is a student organization at Boston University that was founded in 2014 with the goal to bring highly motivated students together to work on apps and other tech projects. We are an app incubator - a closed organization where people develop projects and apps in small but driven teams. You can read more about the founders&amp;rsquo; original vision here.
+To join our team, you&amp;rsquo;ll need to apply. Even if you don&amp;rsquo;t join us, we organize plenty of workshops and events open to the entire BU community Make sure that you&amp;rsquo;re subscribed to our mailing list and follow our Facebook page, so you don&amp;rsquo;t miss any updates!</description>
+    </item>
+    
+    <item>
+      <title>React Native Tutorial</title>
+      <link>http://example.org/workshops/react-native-2017/</link>
+      <pubDate>Sat, 18 Mar 2017 00:20:16 -0500</pubDate>
+      
+      <guid>http://example.org/workshops/react-native-2017/</guid>
+      <description>Teaching the basics of react native development. With React-Native, you can develop cross-platform mobile apps that can release on Android and iOS!</description>
+    </item>
+    
+    <item>
+      <title>Flask Web Development</title>
+      <link>http://example.org/workshops/flask-web-dev-2016/</link>
+      <pubDate>Sun, 14 Feb 2016 00:53:01 -0500</pubDate>
+      
+      <guid>http://example.org/workshops/flask-web-dev-2016/</guid>
+      <description>Learn how to use Flask &amp;ndash; which runs off Python, a language you probably know already from your classes at BU! &amp;ndash; to create a fantastic website that can interact with a database.</description>
+    </item>
+    
+  </channel>
+</rss>

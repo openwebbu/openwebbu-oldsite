@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flask Web Development | Open Web</title>
+	<meta name="description" content="Open Web BU is BU&#39;s best club for passionate coders.">
+	<meta name="author" content="Open Web BU">
+	<link rel="stylesheet" href="/styles.css">
+	<script defer src="/app.js"></script>
+	
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  
+		ga('create', 'UA-49802010-3', 'auto');
+		ga('send', 'pageview');
+	  
+	  </script>
+</head>
+<body>
+	<header>
+	<div class="header__content">
+	
+	
+	<nav>
+		<ul class="topnav">
+			<li class="nav__logo nav__link"><a href="http://example.org/">OPEN<span class="nav__logo__thick">WEB</span></a></li>
+		
+			<li class="nav__link"><a href="/about/">About Us</a></li>
+		
+			<li class="nav__link"><a href="/join/">Join</a></li>
+		
+			<li class="nav__link"><a href="/tools/">Tools</a></li>
+		
+			<li class="nav__link"><a href="/workshops/">Workshops</a></li>
+		
+			<li class="nav__link icon">
+				<a href="javascript:void(0);" onclick="window.showMenu()" aria-label="Navigation Menu">
+					<i aria-hidden="true" class="fa fa-bars"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	
+	</div>
+</header>
+	
+	<main>
+		<article>
+			<h1>Flask Web Development</h1>
+			<time></time>
+			<div>
+				<h2 id="setup">Setup</h2>
+<p>Install <a href="https://www.python.org/downloads/">Python 3</a>, and have your favorite text editor ready. We reccomend <a href="https://code.visualstudio.com/">VS Code</a>.</p>
+<p>Download the started code from our <a href="https://github.com/lawrluor/flask_webdev/">Github repo</a>.</p>
+<h3 id="create-your-virtual-environment">Create Your virtual environment</h3>
+<p>A virtual environment is an isolated Python environment that contains your application&rsquo;s libraries and dependencies. We will create and install a virtual environment, that we will name <code>flask</code>. The <code>activate</code> line activates your virtual environment.</p>
+<p>On <strong>OS X, Linux, Cygwin</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Navigate to your project directory (the starter code folder you downloaded)</span>
+
+<span style="color:#75715e"># Using Python 3</span>
+$ python3 -m venv flask 
+$ source flask/bin/activate
+
+<span style="color:#75715e"># Using Python 2</span>
+$ pip install virtualenv
+$ virtualenv flask
+
+<span style="color:#75715e"># If the ABOVE commands fail: ERROR: virtualenv is not compatible with this system or executable</span>  
+<span style="color:#75715e"># https://stackoverflow.com/questions/5904319/problem-with-virtualenv-in-mac-os-x</span>
+$ conda install virtualenv
+$ virtualenv flask
+
+<span style="color:#75715e"># Install requirements and flask libraries. Try flask/bin/pip3 if not working</span>
+$ flask/bin/pip install flask
+$ flask/bin/pip install flask-sqlalchemy
+$ flask/bin/pip install sqlalchemy-migrate
+$ flask/bin/pip install flask-whooshalchemy
+$ flask/bin/pip install flask-wtf</code></pre></div>
+<p>On <strong>Windows</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Navigate to your project directory (the starter code folder you downloaded)</span>
+<span style="color:#75715e"># $ dir will list all files &amp; folders in your current directory, $ cd [folder] will change your current directory</span>
+$ python get-pip.py <span style="color:#75715e"># Scripts\python # Python\get-pip.py</span>
+$ pip install virtualenv
+$ virtualenv flask
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\a</span>ctivate.bat
+
+<span style="color:#75715e"># Install requirements and flask libraries</span>
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask-sqlalchemy
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask-whooshalchemy
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install flask-wtf
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ip install sqlalchemy-migrate</code></pre></div>
+<h2 id="start">Start</h2>
+<p>Open VS Code, and drag the starter code repository into the window. There will be a side panel that appears that shows the basic folder structure for our application.</p>
+<ul>
+<li>The <code>app</code> folder will be where we will put our application package.</li>
+<li>The <code>templates</code> sub-folder is where our webpage templates will go (the front-end of the website, or the part the users interact with).</li>
+</ul>
+<h3 id="the-application-object">The Application Object</h3>
+<p>We need to initialize the web application. View the simple init script for our <code>app</code> package (file <code>app/__init__.py</code>). Add the following lines  of code and ignore the rest - they will be explained later.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> Flask <span style="color:#75715e"># import Flask library and class</span>
+
+app_obj <span style="color:#f92672">=</span> Flask(__name__) <span style="color:#75715e"># Initialize Flask web application object</span>
+
+<span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> views <span style="color:#75715e"># This is the app folder in which views are located</span></code></pre></div>
+<p>The script above simply creates a Flask application object, and then imports the views module, which we created earlier. Do not confuse <code>app_obj</code> the variable (which gets assigned the <code>Flask</code> instance) with <code>app</code> the package (from which we import the <code>views</code> module).</p>
+<h3 id="the-views">The Views</h3>
+<p>Views are the handlers that respond to requests from web browsers or other clients. Basically, each route is mapped to a Flask wrapper function. So if web address is <code>/home</code>, the corresponding <code>home</code> function in views will handle the request URL and execute the appropriate functions. Let&rsquo;s write our first view function, in file <code>app/views.py</code>. This file is under the app directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> app_obj
+
+<span style="color:#a6e22e">@app_obj.route</span>(<span style="color:#e6db74">&#39;/&#39;</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">home</span>():
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span></code></pre></div>
+<ul>
+<li>The <code>@app_obj.route</code> decorators create the mappings from URL  <code>/home</code> to this function.</li>
+<li>What it does: just returns a string, to be displayed on the client&rsquo;s web browser. (Notice we did not use templates)</li>
+</ul>
+<h3 id="running-the-web-application">Running the Web Application</h3>
+<p>The final step to have a fully working web application is to create a script that starts up the development web server with our application. Create file <code>run.py</code> in your root directory with the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#!flask/bin/python</span>
+<span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> app_obj
+app_obj<span style="color:#f92672">.</span>run(debug<span style="color:#f92672">=</span>True)</code></pre></div>
+<p>The script simply imports the <code>app</code> variable from our app package and invokes its <code>run</code> method to start the server. Remember that the <code>app</code> variable holds the <code>Flask</code> instance that we created it above. The first line indicates that the version of Python we are using is from the virtual environment we created, <code>flask</code>.</p>
+<p>Now it&rsquo;s time to run the script.</p>
+<p>On <strong>OS X, Linux and Cygwin</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ chmod a+x run.py <span style="color:#75715e"># change file to be executable</span>
+$ python3 run.py</code></pre></div>
+<p>On <strong>Windows</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ flask/Scripts/python run.py</code></pre></div>
+<p>You should get some confirmation that your server is running. Now, visit this address in your browser: <a href="http://localhost:5000/">http://localhost:5000/</a> or the address that appears. To kill the server, hit ctrl-c.</p>
+<h2 id="lets-get-cooking">Let&rsquo;s Get Cooking</h2>
+<h3 id="using-templates">Using Templates</h3>
+<p>Remember how in <code>views.py</code>, we return <code>“Hello World!”</code> when accessing the <code>/home</code> view. We could also return raw HTML, as a string, but the better way to do it is to include it in a template, a standalone HTML file which Flask read. This allows you to create a dynamic HTML page</p>
+<p>Put your code in the file <code>app/templates/home.html</code>, and under your app and templates directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;{{ title }}&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+      &lt;<span style="color:#f92672">h1</span>&gt;{{ user }}&#39;s Cookbook&lt;/<span style="color:#f92672">h1</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>Then, alter your <code>views.py</code> code to include this import: This is a function from Flask framework called <code>render_template</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> render_template
+<span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> app_obj</code></pre></div>
+<p>This  takes a template filename (home.html) and a variable list of arguments and returns the rendered template, with all the arguments replaced. Finally, redefine your <code>home</code> function to return the home template, with <code>title</code> and <code>user</code> variables.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">home</span>():
+    <span style="color:#66d9ef">return</span> render_template(<span style="color:#e6db74">&#39;home.html&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Home&#39;</span>, user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Law&#39;</span>)</code></pre></div>
+<p>Then run your code again: <code>$ python3 run.py.</code> Note how the title in your browser is the title you&rsquo;ve supplied (<code>'Home'</code>), and that the <code>user</code> variable within the <code>{{ }}</code> has been replaced by your provided string. Those of you who understand HTML might be confused by that - this is Flask interpreting them using the <a href="http://jinja.pocoo.org/">Jinja2</a> templating engine that is part of the Flask framework. Jinja2 substitutes <code>{{...}}</code> blocks with the corresponding values provided as template arguments.</p>
+<h3 id="jinja-hacks">Jinja Hacks</h3>
+<p>You can do other cool things with Jinja, like set up conditional <code>(if, else)</code> statements or <code>for</code> loops. We&rsquo;re going to use the latter to display many recipes dynamically.</p>
+<p>First, add a dictionary <code>recipes</code> to your home function, and pass it into the render_template function.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">home</span>():
+    recipes <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Chicken&#39;</span>, <span style="color:#e6db74">&#39;Chowder&#39;</span>]
+    <span style="color:#66d9ef">return</span> render_template(<span style="color:#e6db74">&#39;home.html&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Home&#39;</span>, user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Law&#39;</span>, recipes<span style="color:#f92672">=</span>recipes)</code></pre></div>
+<p>In our <code>home.html</code> template, let&rsquo;s add support to display each individual recipe.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;{{ user }}&#39;s Cookbook!&lt;/<span style="color:#f92672">h1</span>&gt;
+    {% for recipe in recipes %}
+        &lt;<span style="color:#f92672">div</span>&gt;{{ recipe }}&lt;/<span style="color:#f92672">div</span>&gt;
+    {% endfor %}
+&lt;/<span style="color:#f92672">body</span>&gt;</code></pre></div>
+<p>This is the Jinja syntax for the <code>for</code> loop. We see inside the loop, we simply display each <code>recipe</code> as a dynamic variable from our list of <code>recipes</code> - neat! Now run your code again and view it in your browser.</p>
+<h3 id="the-database">The Database</h3>
+<p>This is core of back-end web development. We will be using a SQLite Database.</p>
+<p>We will be using SQLAlchemy, a Python library that wraps raw SQL (Standard Query Language) calls  into easily accessible object-like representation of database tables. Those of you who have experience with raw SQL will understand what I mean in a second. This is also known as an Object-Relational-Model (ORM).</p>
+<p>Uncomment out the commented lines in <code>app/__init__.py</code>. These will allow us to configure and create our database.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> Flask
+<span style="color:#f92672">from</span> flask.ext.sqlalchemy <span style="color:#f92672">import</span> SQLAlchemy <span style="color:#75715e"># database interfacing</span>
+
+app_obj <span style="color:#f92672">=</span> Flask(__name__) <span style="color:#75715e"># Initialize Flask web application object</span>
+app_obj<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>from_object(<span style="color:#e6db74">&#39;config&#39;</span>) <span style="color:#75715e"># use database path</span>
+app_obj<span style="color:#f92672">.</span>config[<span style="color:#e6db74">&#39;SQLALCHEMY_TRACK_MODIFICATIONS&#39;</span>] <span style="color:#f92672">=</span> True
+db <span style="color:#f92672">=</span> SQLAlchemy(app_obj) <span style="color:#75715e"># create database</span>
+
+<span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> views
+<span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> models</code></pre></div>
+<h3 id="databases-explained">Databases Explained</h3>
+<p>Say you have a <strong>library</strong>, your database, and in your library you have thousands of <strong>books</strong>. Each book has the same attributes an <strong>id</strong> number, a <strong>title</strong>, and an <strong>author</strong>, so you can represent the books as a <strong>database table</strong>, with columns as attributes of the data and rows as each book (entry) in the database table.</p>
+<p><img src="/workshops/LibraryDB.png" alt="Library Database Example"></p>
+<p>Analogously, our <strong>cookbook</strong> (the database) holds <strong>recipes</strong> (the database table), each with an <strong>id</strong>, <strong>name</strong>, and <strong>cuisine</strong>. So the database table <code>recipe</code>, with table columns <code>id, name, cuisine,</code> would look like this in our SQLite database.</p>
+<p><img src="/workshops/RecipeDB.png" alt="Recipe Database Example"></p>
+<p>As a Python object, that would be:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Recipe</span>:
+    int id
+    string name
+    string cuisine</code></pre></div>
+<p>Now as a SQLAlchemy database model, Recipe would look like this. Put this code in the file <code>models.py</code>, under the app directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> db
+
+<span style="color:#75715e"># Stick to these table columns for now</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Recipe</span>(db<span style="color:#f92672">.</span>Model):
+    __tablename__ <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;recipes&#34;</span>
+    id <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>Column(db<span style="color:#f92672">.</span>Integer, primary_key<span style="color:#f92672">=</span>True)
+    name <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>Column(db<span style="color:#f92672">.</span>String(<span style="color:#ae81ff">128</span>), index<span style="color:#f92672">=</span>True, unique<span style="color:#f92672">=</span>True)
+    cuisine <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>Column(db<span style="color:#f92672">.</span>String(<span style="color:#ae81ff">64</span>), index<span style="color:#f92672">=</span>True)
+
+    <span style="color:#66d9ef">def</span> __repr__(self):
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&lt;Name: </span><span style="color:#e6db74">%r</span><span style="color:#e6db74">, Cuisine: </span><span style="color:#e6db74">%r</span><span style="color:#e6db74">&gt;&#39;</span> <span style="color:#f92672">%</span> (self<span style="color:#f92672">.</span>name, self<span style="color:#f92672">.</span>cuisine)
+        
+    <span style="color:#66d9ef">def</span> __str__(self):
+        <span style="color:#66d9ef">return</span> name</code></pre></div>
+<ul>
+<li><code>tablename</code> is how your database will identify your table</li>
+<li>Each recipe in our cookbook will have a unique int <code>id</code>, so that it is easy to look up. These are automatically generated as they are the primary key, indicated by the <code>primary_key=True</code> argument</li>
+<li>Each recipe will have a string <code>name</code> under 128 characters long. This is unique, as indicated by the <code>unique=True</code> argument</li>
+<li>Each recipe will have a string <code>cuisine</code> under 64 characters long, indicating the type of cuisine the recipe belongs to</li>
+<li><code>__repr__</code> method will tells Python how to print objects of this class, for debugging purposes</li>
+</ul>
+<h3 id="creating-the-database">Creating the Database</h3>
+<p>Head back to your project&rsquo;s root directory. We will now run a few scripts to create and generate the migrations. Don&rsquo;t worry if you don&rsquo;t fully understand this. View the <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database">full tutorial</a> if you&rsquo;re interested in the details.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># OS X, Linux: Create the database</span>
+$ chmod a+x db_create.py
+$ python3 db_create.py
+
+<span style="color:#75715e"># Windows only: Create the database</span>
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ython db_create.py</code></pre></div>
+<p>This creates a new <code>app.db</code> file, which is an empty sqlite database. You will also have a <code>db_repository</code> directory with some files inside - this is where SQLAlchemy-migrate stores its data files.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># OS X, Linux: Generate the migration script</span>
+$ chmod a+x db_migrate.py
+$ python3 db_migrate.py
+
+<span style="color:#75715e"># Windows only: Generate the migration script</span>
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ython db_migrate.py<span style="color:#e6db74">`</span></code></pre></div>
+<p>Anytime you change the models (and therefore the database tables), you will need to migrate your database. As we have changed our models (from nothing after creating the database, to containing one table Recipe), we will need to run this script, which will tell our database what to add in the next step.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># OS X, Linux: Upgrade the database</span>
+$ chmod a+x db_upgrade.py
+$ python3 db_upgrade.py
+
+<span style="color:#75715e"># Windows: Upgrade the database</span>
+$ flask<span style="color:#ae81ff">\S</span>cripts<span style="color:#ae81ff">\p</span>ython db_upgrade.py</code></pre></div>
+<p>Now our changes to the models have been fully applied, and we can begin working with the new Recipe table in our database. This means creating new Recipes, and altering or deleting existing ones.</p>
+<h2 id="playtime">Playtime</h2>
+<p>Let&rsquo;s begin playing with the new Recipe table in our database. First, open up the Python shell.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python3 <span style="color:#75715e"># OS X, Linux</span>
+$ flask/Scripts/python <span style="color:#75715e"># Windows only</span></code></pre></div>
+<p>Bring our database and models into memory with this import:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> db, models</code></pre></div>
+<p>Let&rsquo;s create a new Recipe:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> recipe1 <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>Recipe(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Spaghetti &amp; Meatballs&#39;</span>, cuisine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Italian&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> db<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>add(recipe1)
+<span style="color:#f92672">&gt;&gt;&gt;</span> db<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>commit()</code></pre></div>
+<ul>
+<li>Recall that the <code>id</code> is generated automatically, because <code>primary_key</code> was set to <code>True</code>.</li>
+<li>Changes to a database are done in the context of a session, which belongs to the database object <code>db</code>. Multiple changes can be accumulated in a session and once all the changes have been registered you can issue a single <code>db.session.commit().</code></li>
+</ul>
+<p>Now query our database for the recipes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> recipes <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>Recipe<span style="color:#f92672">.</span>query<span style="color:#f92672">.</span>all() <span style="color:#75715e"># Equivalent to raw SQL &#34;FROM recipes SELECT *&#34;</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> recipes <span style="color:#75715e"># returns a list of your current recipes</span></code></pre></div>
+<p>Create two more recipes. You can be creative with this, or use the <code>Recipe</code> objects below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> recipe2 <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>Recipe(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Clam Chowder&#39;</span>, cuisine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;New England&#39;</span>)
+<span style="color:#f92672">&gt;&gt;&gt;</span> db<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>add(recipe2)
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> recipe3 <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>Recipe(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Green Eggs &amp; Ham&#39;</span>) <span style="color:#75715e"># No need to fill cuisine parameter</span>
+<span style="color:#f92672">&gt;&gt;&gt;</span> db<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>add(recipe3)
+
+<span style="color:#f92672">&gt;&gt;&gt;</span> db<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>commit()</code></pre></div>
+<p>Now query our database again:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> recipes <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>Recipe<span style="color:#f92672">.</span>query<span style="color:#f92672">.</span>all()
+<span style="color:#f92672">&gt;&gt;&gt;</span> recipes <span style="color:#75715e"># Should return a list of your current recipes</span></code></pre></div>
+<p>To exit the python shell, hit <code>ctrl-d</code>.</p>
+<h3 id="the-functional-web-application">The Functional Web Application</h3>
+<p>Let&rsquo;s go back to <code>views.py</code> and replace our placeholder recipe data with the recipe objects from our database. First, we need to update our import statements to include the database we&rsquo;ve created, and our Recipe class in <code>app/models.py</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> render_template
+<span style="color:#f92672">from</span> app <span style="color:#f92672">import</span> app_obj, db
+<span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Recipe</code></pre></div>
+<p>Now, we will make two query statements to grab Recipe objects from our database
+feature a recipe at the top of our page, and list others below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">home</span>():
+    recipes <span style="color:#f92672">=</span> Recipe<span style="color:#f92672">.</span>query<span style="color:#f92672">.</span>all()
+    featured <span style="color:#f92672">=</span> Recipe<span style="color:#f92672">.</span>query<span style="color:#f92672">.</span>filter(Recipe<span style="color:#f92672">.</span>name<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;Green Eggs &amp; Ham&#34;</span>)<span style="color:#f92672">.</span>first()
+    <span style="color:#66d9ef">return</span> render_template(<span style="color:#e6db74">&#39;home.html&#39;</span>, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Home&#39;</span>, user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Law&#39;</span>, featured<span style="color:#f92672">=</span>featured, recipes<span style="color:#f92672">=</span>recipes)</code></pre></div>
+<ul>
+<li>The first you are familiar with, which grabs all existing Recipe objects in the database.</li>
+<li>The second, grabs only the first Recipe object that has the name <code>“Green Eggs &amp; Ham”</code>. It returns None if no such object can be found</li>
+<li>There are many types of queries that SQLAlchemy supports, such as querying on multiple columns (name, cuisine), ordering, etc. If you are interested or want to work more on this, see <a href="http://docs.sqlalchemy.org/en/latest/orm/query.html">their documentation</a></li>
+</ul>
+<p>Now, change our template to reflect this change.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">h1</span>&gt;{{ user }}&#39;s Cookbook!&lt;/<span style="color:#f92672">h1</span>&gt;
+
+  &lt;<span style="color:#f92672">h2</span>&gt;{{ featured }}&lt;/<span style="color:#f92672">h2</span>&gt;
+  
+  {% for recipe in recipes %}
+    &lt;<span style="color:#f92672">div</span>&gt;{{ recipe }}&lt;/<span style="color:#f92672">div</span>&gt;
+  {% endfor %}
+&lt;/<span style="color:#f92672">body</span>&gt;</code></pre></div>
+<p>Congratulations! You now have a working Flask Web Application, with a working front-end in HTML (interfaced with Jinja), that is mapped to a working back-end by URLs and Flask functions, and that pulls dynamic data from a live database.</p>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Try expanding your application by including more routes like <code>'/favorites'</code></li>
+<li>Query your database with more types of filters, joins, or query commands (<a href="http://docs.sqlalchemy.org/en/latest/orm/query.html">SQLAlchemy Documentation</a>)</li>
+<li>(Advanced) Expand your database to include more tables,  like <code>Ingredients</code> or database tables to have more columns (like <code>cooking_time</code>)</li>
+</ul>
+
+			</div>
+			
+			
+		</article>
+	</main>
+
+
+	<footer>
+	
+	<a href="https://www.facebook.com/openwebbu" aria-label="Facebook Page">
+		<i aria-hidden="true" class="fab fa-facebook-f"></i>
+	</a>
+	<a href="https://instagram.com/openwebbu/" aria-label="Instagram Profile">
+		<i aria-hidden="true" class="fab fa-instagram"></i>
+	</a>
+	<a href="https://medium.com/@openwebbu" aria-label="Medium Blog">
+		<i aria-hidden="true" class="fab fa-medium-m"></i>
+	</a>
+	<a href="https://twitter.com/openwebbu" aria-label="Twitter Feed">
+		<i aria-hidden="true" class="fab fa-twitter"></i>
+	</a>
+</footer>
+
+</body>
+</html>
